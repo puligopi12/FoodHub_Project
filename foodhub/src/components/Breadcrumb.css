@@ -1,0 +1,60 @@
+.breadcrumb-container {
+
+  width: 100%;
+
+  background: #fafafa;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+.breadcrumb {
+
+  width: 92%;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 12px 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 13px;
+}
+
+
+.breadcrumb a {
+
+  color: #777;
+
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+
+.breadcrumb a:hover {
+
+  color: #e23744;
+}
+
+
+.breadcrumb span {
+
+  color: #aaa;
+
+  font-size: 16px;
+}
+
+
+.breadcrumb strong {
+
+  color: #e23744;
+
+  font-weight: 700;
+}

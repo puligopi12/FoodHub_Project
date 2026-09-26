@@ -1,0 +1,346 @@
+/* =========================================================
+   FOOD DISCOVERY SECTION
+========================================================= */
+
+.food-carousel-section {
+  width: 100%;
+  padding: 55px 0 65px;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fff8f9 100%
+  );
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIN WIDTH
+========================================================= */
+
+.food-carousel-header,
+.food-carousel {
+  width: calc(100% - 120px);
+  max-width: 1450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.food-carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.food-carousel-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #e23744;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.food-carousel-header h2 {
+  margin: 0;
+  color: #171717;
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.food-carousel-header p {
+  margin: 9px 0 0;
+  color: #777;
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.carousel-arrows {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-arrows button {
+  width: 46px;
+  height: 46px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #eeeeef;
+  color: #222;
+
+  font-size: 22px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.carousel-arrows button:hover {
+  background: #e23744;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(226, 55, 68, 0.25);
+}
+
+
+/* =========================================================
+   HORIZONTAL CAROUSEL
+========================================================= */
+
+.food-carousel {
+  display: flex;
+  gap: 35px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  padding: 10px 5px 25px;
+
+  scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.food-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   CATEGORY ITEM
+========================================================= */
+
+.food-category-item {
+  flex: 0 0 145px;
+  width: 145px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-decoration: none;
+
+  scroll-snap-align: start;
+}
+
+
+/* =========================================================
+   IMAGE CIRCLE
+========================================================= */
+
+.food-category-image {
+  width: 140px;
+  height: 140px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    145deg,
+    #fff6f7,
+    #ffeef0
+  );
+
+  border: 4px solid #ffffff;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.10);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   FOOD IMAGE
+========================================================= */
+
+.food-category-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.45s ease;
+}
+
+
+/* =========================================================
+   HOVER EFFECT
+========================================================= */
+
+.food-category-item:hover .food-category-image {
+  transform:
+    translateY(-8px)
+    scale(1.04);
+
+  box-shadow:
+    0 18px 40px rgba(226, 55, 68, 0.18);
+}
+
+.food-category-item:hover .food-category-image img {
+  transform: scale(1.10);
+}
+
+
+/* =========================================================
+   CATEGORY NAME
+========================================================= */
+
+.food-category-item h3 {
+  margin: 15px 0 0;
+
+  color: #333;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.food-category-item:hover h3 {
+  color: #e23744;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   BROKEN IMAGE
+========================================================= */
+
+.food-category-image.image-error {
+  background: linear-gradient(
+    145deg,
+    #fff0f1,
+    #ffe4e6
+  );
+}
+
+.food-category-image.image-error::after {
+  content: "🍽️";
+  font-size: 42px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .food-carousel-header,
+  .food-carousel {
+    width: calc(100% - 50px);
+  }
+
+  .food-carousel {
+    gap: 25px;
+  }
+
+  .food-category-item {
+    flex-basis: 125px;
+    width: 125px;
+  }
+
+  .food-category-image {
+    width: 120px;
+    height: 120px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .food-carousel-section {
+    padding: 40px 0 45px;
+  }
+
+  .food-carousel-header {
+    width: calc(100% - 35px);
+    align-items: center;
+  }
+
+  .food-carousel {
+    width: calc(100% - 35px);
+    gap: 18px;
+  }
+
+  .food-carousel-label {
+    font-size: 9px;
+  }
+
+  .food-carousel-header h2 {
+    font-size: 24px;
+  }
+
+  .food-carousel-header p {
+    font-size: 12px;
+  }
+
+  .carousel-arrows button {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .food-category-item {
+    flex-basis: 105px;
+    width: 105px;
+  }
+
+  .food-category-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .food-category-item h3 {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+}

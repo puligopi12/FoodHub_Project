@@ -1,0 +1,444 @@
+/* =========================================
+   SEARCH PAGE
+========================================= */
+
+.search-page {
+
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(255, 250, 250, 0.94),
+      rgba(255, 255, 255, 0.97)
+    ),
+    url("/images/background/food-background.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-attachment: fixed;
+
+}
+
+
+/* =========================================
+   SEARCH HERO
+========================================= */
+
+.search-hero {
+
+  position: relative;
+
+  min-height: 330px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #4b164c,
+      #7d245d,
+      #c72c4d
+    );
+
+}
+
+
+/* Decorative circles */
+
+.search-hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+
+  height: 320px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.08);
+
+  top: -180px;
+
+  left: -100px;
+
+}
+
+
+.search-hero::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+
+  height: 280px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.07);
+
+  bottom: -180px;
+
+  right: -80px;
+
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.search-hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: min(850px, 90%);
+
+  text-align: center;
+
+  color: white;
+
+}
+
+
+.search-label {
+
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #ffd1dc;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+}
+
+
+.search-hero h1 {
+
+  margin: 0;
+
+  font-size: clamp(32px, 5vw, 54px);
+
+  font-weight: 900;
+
+  letter-spacing: -1.5px;
+
+}
+
+
+.search-hero p {
+
+  margin: 12px 0 28px;
+
+  color: #f7dce7;
+
+  font-size: 16px;
+
+}
+
+
+/* =========================================
+   SEARCH BOX
+========================================= */
+
+.search-box {
+
+  width: min(700px, 100%);
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  background: white;
+
+  padding: 7px;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 15px 45px rgba(0,0,0,0.22);
+
+}
+
+
+.search-box-icon {
+
+  padding-left: 18px;
+
+  font-size: 20px;
+
+}
+
+
+.search-box input {
+
+  flex: 1;
+
+  min-width: 0;
+
+  border: none;
+
+  outline: none;
+
+  padding: 15px;
+
+  font-size: 15px;
+
+  color: #222;
+
+}
+
+
+.search-box button {
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 14px 25px;
+
+  background: #e9334a;
+
+  color: white;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: .25s ease;
+
+}
+
+
+.search-box button:hover {
+
+  background: #c9233b;
+
+  transform: translateY(-1px);
+
+}
+
+
+/* =========================================
+   RESULTS
+========================================= */
+
+.search-results {
+
+  width: min(1250px, 92%);
+
+  margin: 0 auto;
+
+  padding: 55px 0 80px;
+
+}
+
+
+.search-small-label {
+
+  color: #e9334a;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+}
+
+
+.search-results h2 {
+
+  margin: 7px 0 4px;
+
+  font-size: 30px;
+
+  color: #151515;
+
+}
+
+
+.search-results-header p {
+
+  margin: 0;
+
+  color: #777;
+
+}
+
+
+/* =========================================
+   FOOD GRID
+========================================= */
+
+.search-food-grid {
+
+  margin-top: 28px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+
+}
+
+
+/* =========================================
+   MAKE FOOD CARDS SMALLER
+========================================= */
+
+.search-food-grid .food-card {
+
+  width: 100%;
+
+  min-width: 0;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+}
+
+
+/* Reduce image height */
+
+.search-food-grid .food-card-image,
+.search-food-grid img {
+
+  height: 180px;
+
+  object-fit: cover;
+
+}
+
+
+/* =========================================
+   NO RESULTS
+========================================= */
+
+.no-results {
+
+  margin-top: 35px;
+
+  padding: 70px 20px;
+
+  text-align: center;
+
+  background: white;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,0.06);
+
+}
+
+
+.no-results > div {
+
+  font-size: 55px;
+
+}
+
+
+.no-results h3 {
+
+  margin: 12px 0 5px;
+
+  font-size: 24px;
+
+}
+
+
+.no-results p {
+
+  color: #777;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .search-food-grid {
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+  }
+
+}
+
+
+@media (max-width: 750px) {
+
+  .search-food-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+
+  }
+
+  .search-results {
+
+    width: 94%;
+
+  }
+
+  .search-hero {
+
+    min-height: 300px;
+
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .search-food-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .search-box {
+
+    border-radius: 12px;
+
+  }
+
+  .search-box button {
+
+    padding: 12px 15px;
+
+  }
+
+}

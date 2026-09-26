@@ -1,0 +1,2411 @@
+/* =====================================================
+   FOODHUB HOME PAGE
+===================================================== */
+
+.home-page {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #171717;
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero-section {
+  position: relative;
+
+  min-height: 560px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      115deg,
+      #32104f 0%,
+      #4c145e 45%,
+      #8d235d 100%
+    );
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HERO DECORATION
+===================================================== */
+
+.hero-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.hero-circle-one {
+  width: 330px;
+  height: 330px;
+
+  left: -150px;
+  top: -150px;
+
+  background: rgba(255,255,255,0.07);
+}
+
+
+.hero-circle-two {
+  width: 240px;
+  height: 240px;
+
+  right: -70px;
+  top: 40px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+
+.hero-circle-three {
+  width: 350px;
+  height: 350px;
+
+  right: -170px;
+  bottom: -230px;
+
+  background: rgba(255,255,255,0.05);
+}
+
+
+/* =====================================================
+   FLOATING FOOD
+===================================================== */
+
+.hero-food {
+  position: absolute;
+
+  font-size: 55px;
+
+  opacity: 0.15;
+
+  filter:
+    blur(.2px)
+    drop-shadow(
+      0 12px 15px rgba(0,0,0,.25)
+    );
+
+  animation:
+    heroFoodFloat 4s ease-in-out infinite;
+}
+
+
+.hero-food-one {
+  left: 7%;
+  top: 22%;
+}
+
+
+.hero-food-two {
+  right: 8%;
+  top: 32%;
+
+  animation-delay: 1s;
+}
+
+
+.hero-food-three {
+  left: 12%;
+  bottom: 10%;
+
+  animation-delay: 2s;
+}
+
+
+@keyframes heroFoodFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(6deg);
+  }
+
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+
+  width: min(1000px, 92%);
+
+  padding: 65px 20px 60px;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   HERO BADGE
+===================================================== */
+
+.hero-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 9px 20px;
+
+  border:
+    1px solid rgba(255,255,255,.3);
+
+  border-radius: 30px;
+
+  background:
+    rgba(255,255,255,.1);
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+
+  backdrop-filter: blur(10px);
+}
+
+
+/* =====================================================
+   HERO HEADING
+===================================================== */
+
+.hero-content h1 {
+  margin: 24px 0 16px;
+
+  color: #ffffff;
+
+  font-size: clamp(
+    45px,
+    6vw,
+    76px
+  );
+
+  line-height: .98;
+
+  font-weight: 900;
+
+  letter-spacing: -3px;
+}
+
+
+.hero-content h1 span {
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #ffd7e9
+    );
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+.hero-heading-icon {
+  display: inline-block;
+
+  margin-left: 12px;
+
+  font-size: .65em;
+
+  -webkit-text-fill-color: initial;
+}
+
+
+/* =====================================================
+   HERO DESCRIPTION
+===================================================== */
+
+.hero-description {
+  max-width: 720px;
+
+  margin: 0 auto 30px;
+
+  color: rgba(255,255,255,.9);
+
+  font-size: 17px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   SEARCH BAR
+===================================================== */
+
+.food-search-bar {
+  width: min(850px, 100%);
+
+  min-height: 72px;
+
+  margin: 0 auto;
+
+  padding: 6px;
+
+  display: flex;
+
+  align-items: stretch;
+
+  background: #ffffff;
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 18px 45px rgba(0,0,0,.25);
+}
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.location-box {
+  width: 245px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 18px;
+
+  border: none;
+
+  border-right:
+    1px solid #eeeeee;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+
+.location-icon {
+  font-size: 25px;
+}
+
+
+.location-content {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.location-content small {
+  color: #999999;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: .8px;
+}
+
+
+.location-content strong {
+  color: #171717;
+
+  font-size: 14px;
+}
+
+
+.location-arrow {
+  color: #555;
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   SEARCH INPUT
+===================================================== */
+
+.search-input-box {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding-left: 18px;
+}
+
+
+.search-icon {
+  font-size: 21px;
+}
+
+
+.search-input-box input {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 58px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #222;
+
+  font-family: inherit;
+
+  font-size: 15px;
+}
+
+
+.search-input-box input::placeholder {
+  color: #999;
+}
+
+
+.search-action {
+  height: 58px;
+
+  padding: 0 28px;
+
+  border: none;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff304f,
+      #e32645
+    );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 16px rgba(227,38,69,.25);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+
+.search-action:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(227,38,69,.35);
+}
+
+
+/* =====================================================
+   HERO FEATURES
+===================================================== */
+
+.hero-features {
+  margin-top: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 45px;
+}
+
+
+.hero-features span {
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.hero-features b {
+  margin-right: 6px;
+}
+
+
+/* =====================================================
+   FOOD CAROUSEL
+===================================================== */
+
+.food-carousel-section {
+  width: 100%;
+
+  background: #ffffff;
+
+  padding: 10px 0;
+}
+
+
+/* =====================================================
+   COMMON SECTION HEADER
+===================================================== */
+
+.section-header {
+  text-align: center;
+
+  margin-bottom: 38px;
+}
+
+
+.section-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #ed263f;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.section-header h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: clamp(
+    30px,
+    4vw,
+    42px
+  );
+
+  line-height: 1.1;
+
+  font-weight: 900;
+
+  letter-spacing: -1.5px;
+}
+
+
+.section-header h2::after {
+  content: "";
+
+  display: block;
+
+  width: 45px;
+  height: 4px;
+
+  margin: 12px auto 0;
+
+  border-radius: 10px;
+
+  background: #ed263f;
+}
+
+
+.section-header p {
+  margin: 13px 0 0;
+
+  color: #777777;
+
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   QUICK CATEGORY
+===================================================== */
+
+.quick-category-section {
+  padding: 65px 20px 75px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffafa,
+      #ffffff
+    );
+}
+
+
+.quick-category-container {
+  width: min(1200px, 100%);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(8, 1fr);
+
+  gap: 17px;
+}
+
+
+.quick-category-card {
+  min-height: 135px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  padding: 15px 10px;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid #eeeeee;
+
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  color: #171717;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.04);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+
+.quick-category-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #ffd2d8;
+
+  box-shadow:
+    0 15px 30px rgba(0,0,0,.09);
+}
+
+
+.quick-category-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #ffffff,
+      #fff0f2
+    );
+
+  font-size: 38px;
+
+  box-shadow:
+    0 7px 18px rgba(0,0,0,.06);
+}
+
+
+.quick-category-card strong {
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   MAIN CATEGORIES
+===================================================== */
+
+.categories-section {
+  padding: 70px 20px;
+
+  background: #ffffff;
+}
+
+
+.category-container {
+  width: min(1200px, 100%);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+
+.category-card {
+  position: relative;
+
+  min-height: 250px;
+
+  padding: 27px;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  text-decoration: none;
+
+  color: #171717;
+
+  border:
+    1px solid #eeeeee;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.06);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+
+.category-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 140px;
+  height: 140px;
+
+  right: -50px;
+  top: -50px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,.65);
+}
+
+
+.category-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,.12);
+}
+
+
+.veg-card {
+  background:
+    linear-gradient(
+      135deg,
+      #effbea,
+      #ffffff
+    );
+}
+
+
+.nonveg-card {
+  background:
+    linear-gradient(
+      135deg,
+      #fff0ed,
+      #ffffff
+    );
+}
+
+
+.dessert-card {
+  background:
+    linear-gradient(
+      135deg,
+      #fff0f6,
+      #ffffff
+    );
+}
+
+
+.drinks-card {
+  background:
+    linear-gradient(
+      135deg,
+      #eef9ff,
+      #ffffff
+    );
+}
+
+
+.category-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+.category-icon {
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  font-size: 42px;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+}
+
+
+.category-arrow {
+  font-size: 25px;
+
+  color: #e92743;
+}
+
+
+.category-card h3 {
+  position: relative;
+
+  margin: 24px 0 8px;
+
+  font-size: 23px;
+
+  font-weight: 900;
+}
+
+
+.category-card p {
+  position: relative;
+
+  margin: 0;
+
+  color: #666;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+.category-link {
+  position: absolute;
+
+  left: 27px;
+  bottom: 25px;
+
+  color: #e92743;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   POPULAR FOOD
+===================================================== */
+
+.popular-section {
+  padding: 75px 20px 85px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #fff8f9
+    );
+}
+
+
+.food-container {
+  width: min(1250px, 100%);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =====================================================
+   APP BANNER
+===================================================== */
+
+.app-banner-section {
+  padding: 35px 20px 65px;
+
+  background: #ffffff;
+}
+
+
+.app-banner {
+  position: relative;
+
+  width: min(1520px, 100%);
+
+  min-height: 300px;
+
+  margin: auto;
+
+  padding: 45px 100px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      110deg,
+      #151a1e,
+      #1c2227
+    );
+
+  color: #ffffff;
+}
+
+
+.app-banner::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  right: 250px;
+  top: -200px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,.025);
+}
+
+
+.app-banner-content {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 650px;
+}
+
+
+.app-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  color: #ff5722;
+
+  font-size: 21px;
+
+  font-weight: 900;
+}
+
+
+.app-brand-icon {
+  font-size: 28px;
+}
+
+
+.app-banner-content h2 {
+  margin: 0 0 13px;
+
+  font-size: clamp(
+    32px,
+    4vw,
+    48px
+  );
+
+  line-height: 1.1;
+
+  font-weight: 900;
+
+  letter-spacing: -1.5px;
+}
+
+
+.app-banner-content p {
+  margin: 0;
+
+  color: #949ba0;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   STORE BUTTONS
+===================================================== */
+
+.app-buttons {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+
+.store-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px 18px;
+
+  border: 1px solid #555;
+
+  border-radius: 9px;
+
+  background: #050505;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    transform .2s ease;
+}
+
+
+.store-button:hover {
+  transform: translateY(-3px);
+}
+
+
+.store-icon {
+  font-size: 25px;
+}
+
+
+.store-text {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.store-text small {
+  font-size: 9px;
+
+  color: #ddd;
+}
+
+
+.store-text strong {
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   APP VISUAL
+===================================================== */
+
+.app-banner-visual {
+  position: relative;
+
+  width: 570px;
+  height: 340px;
+
+  flex-shrink: 0;
+}
+
+
+.app-phone {
+  position: absolute;
+
+  z-index: 4;
+
+  left: 50%;
+
+  bottom: -125px;
+
+  transform: translateX(-50%);
+
+  width: 245px;
+  height: 430px;
+
+  padding: 9px;
+
+  box-sizing: border-box;
+
+  border:
+    3px solid #adb2b6;
+
+  border-radius: 40px 40px 0 0;
+
+  background: #08090a;
+
+  box-shadow:
+    0 0 0 4px #353a3e,
+    0 20px 50px rgba(0,0,0,.5);
+}
+
+
+.phone-camera {
+  position: absolute;
+
+  z-index: 8;
+
+  top: 13px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 90px;
+  height: 25px;
+
+  border-radius: 20px;
+
+  background: #000000;
+}
+
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  padding-top: 65px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border-radius: 30px 30px 0 0;
+
+  background: #ffffff;
+
+  color: #171717;
+}
+
+
+.phone-logo {
+  font-size: 38px;
+}
+
+
+.phone-screen h3 {
+  margin: 5px 0 0;
+
+  font-size: 23px;
+
+  font-weight: 900;
+}
+
+
+.phone-screen p {
+  margin: 9px 0 18px;
+
+  text-align: center;
+
+  color: #666;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+
+/* =====================================================
+   QR
+===================================================== */
+
+.qr-code {
+  width: 145px;
+  height: 145px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  padding: 8px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ddd;
+
+  background: #ffffff;
+}
+
+
+.qr-pattern {
+  width: 125px;
+  height: 125px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 5px;
+
+  padding: 8px;
+
+  box-sizing: border-box;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #111 0,
+      #111 4px,
+      #fff 4px,
+      #fff 8px
+    );
+}
+
+
+.qr-pattern span {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  color: #000000;
+
+  font-size: 25px;
+
+  font-weight: 900;
+}
+
+
+.phone-screen strong {
+  color: #ff5722;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   FLOATING FOOD
+===================================================== */
+
+.floating-food {
+  position: absolute;
+
+  z-index: 6;
+
+  font-size: 65px;
+
+  filter:
+    drop-shadow(
+      0 10px 10px rgba(0,0,0,.35)
+    );
+
+  animation:
+    bannerFoodFloat 3.5s ease-in-out infinite;
+}
+
+
+.food-one {
+  left: 25px;
+  bottom: 25px;
+
+  font-size: 78px;
+}
+
+
+.food-two {
+  left: 45px;
+  top: 50px;
+
+  animation-delay: .8s;
+}
+
+
+.food-three {
+  right: 20px;
+  top: 55px;
+
+  animation-delay: 1.5s;
+}
+
+
+@keyframes bannerFoodFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateY(-13px) rotate(5deg);
+  }
+
+}
+
+
+/* =====================================================
+   LOCATIONS
+===================================================== */
+
+.locations-section {
+  padding: 25px 20px 70px;
+
+  background: #ffffff;
+}
+
+
+.locations-container {
+  width: min(1520px, 100%);
+
+  margin: auto;
+}
+
+
+.locations-container h2 {
+  margin: 0 0 25px;
+
+  color: #20242a;
+
+  font-size: 29px;
+
+  font-weight: 900;
+
+  letter-spacing: -.8px;
+}
+
+
+.location-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 17px;
+}
+
+
+.location-grid button {
+  height: 60px;
+
+  border:
+    1px solid #d9d9d9;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  color: #484848;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform .2s ease,
+    color .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+
+.location-grid button:hover {
+  transform: translateY(-3px);
+
+  color: #e23744;
+
+  border-color: #e23744;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.07);
+}
+
+
+.location-grid .show-more-location {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  color: #ff4d00;
+
+  font-weight: 800;
+}
+
+
+.show-more-location span {
+  font-size: 20px;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.home-cta {
+  position: relative;
+
+  padding: 90px 20px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      120deg,
+      #351052,
+      #8e255d
+    );
+
+  color: #ffffff;
+}
+
+
+.home-cta::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  left: -100px;
+  top: -150px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,.07);
+}
+
+
+.cta-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.cta-icon {
+  font-size: 55px;
+
+  margin-bottom: 10px;
+}
+
+
+.cta-label {
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  opacity: .8;
+}
+
+
+.cta-content h2 {
+  margin: 12px 0;
+
+  font-size: 40px;
+
+  font-weight: 900;
+}
+
+
+.cta-content p {
+  margin: 0 0 25px;
+
+  color: rgba(255,255,255,.8);
+
+  font-size: 16px;
+}
+
+
+.cta-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 14px 28px;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #e23744;
+
+  text-decoration: none;
+
+  font-weight: 800;
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+
+.cta-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(0,0,0,.2);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .quick-category-container {
+    grid-template-columns:
+      repeat(4, 1fr);
+  }
+
+
+  .category-container {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .food-container {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+
+  .app-banner {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+
+  .app-banner-visual {
+    width: 450px;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .hero-section {
+    min-height: 530px;
+  }
+
+
+  .food-search-bar {
+    width: 95%;
+  }
+
+
+  .location-box {
+    width: 210px;
+  }
+
+
+  .app-banner {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding:
+      45px 30px 0;
+  }
+
+
+  .app-banner-content {
+    max-width: 100%;
+  }
+
+
+  .app-brand {
+    justify-content: center;
+  }
+
+
+  .app-banner-visual {
+    width: 100%;
+
+    margin-top: 20px;
+  }
+
+
+  .location-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .hero-content h1 {
+    font-size: 48px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+
+  .food-search-bar {
+    flex-direction: column;
+
+    padding: 8px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+  }
+
+
+  .location-box {
+    width: 100%;
+
+    height: 55px;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid #eeeeee;
+  }
+
+
+  .search-input-box {
+    width: 100%;
+
+    padding-left: 10px;
+  }
+
+
+  .search-action {
+    padding: 0 20px;
+  }
+
+
+  .hero-features {
+    gap: 20px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .quick-category-container {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .category-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .food-container {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .app-banner-visual {
+    height: 300px;
+  }
+
+
+  .app-phone {
+    transform:
+      translateX(-50%)
+      scale(.78);
+
+    transform-origin:
+      bottom center;
+  }
+
+
+  .floating-food {
+    font-size: 45px;
+  }
+
+
+  .food-one {
+    font-size: 55px;
+  }
+
+
+  .locations-container h2 {
+    font-size: 24px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .hero-content {
+    padding-top: 45px;
+  }
+
+
+  .hero-content h1 {
+    font-size: 39px;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  .hero-heading-icon {
+    display: block;
+
+    margin: 10px 0 0;
+  }
+
+
+  .hero-features span {
+    font-size: 11px;
+  }
+
+
+  .quick-category-container {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .quick-category-card {
+    min-height: 120px;
+  }
+
+
+  .food-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .app-buttons {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+
+  .store-button {
+    width: 200px;
+  }
+
+
+  .cta-content h2 {
+    font-size: 30px;
+  }
+
+}
+
+/* =====================================================
+   FOODHUB HOME FOOTER
+===================================================== */
+
+.foodhub-home-footer {
+  width: 100%;
+
+  background: #f1f1f6;
+
+  color: #45474e;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FOOTER CONTAINER
+===================================================== */
+
+.foodhub-footer-container {
+  width: min(1350px, 92%);
+
+  margin: 0 auto;
+
+  padding: 62px 0 55px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.35fr
+    1fr
+    1fr
+    1fr
+    1fr;
+
+  gap: 45px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FOOTER BRAND
+===================================================== */
+
+.foodhub-footer-brand {
+  padding-right: 20px;
+}
+
+
+.foodhub-footer-logo {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #202124;
+
+  text-decoration: none;
+
+  font-size: 30px;
+
+  font-weight: 900;
+
+  letter-spacing: -1px;
+}
+
+
+.foodhub-footer-logo-icon {
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #e23744;
+
+  box-shadow:
+    0 7px 18px rgba(226, 55, 68, .18);
+
+  font-size: 27px;
+}
+
+
+.foodhub-footer-copyright {
+  margin: 12px 0 17px;
+
+  color: #555861;
+
+  font-size: 15px;
+}
+
+
+.foodhub-footer-description {
+  max-width: 270px;
+
+  margin: 0;
+
+  color: #777a83;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   FOOTER COLUMNS
+===================================================== */
+
+.foodhub-footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+.foodhub-footer-column h3 {
+  margin: 0 0 19px;
+
+  color: #202124;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+
+.foodhub-footer-column a {
+  margin-bottom: 15px;
+
+  color: #555861;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  line-height: 1.35;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+
+.foodhub-footer-column a:hover {
+  color: #e23744;
+
+  transform: translateX(3px);
+}
+
+
+/* =====================================================
+   LEGAL
+===================================================== */
+
+.foodhub-footer-sub-heading {
+  margin-top: 29px !important;
+
+  margin-bottom: 17px !important;
+}
+
+
+/* =====================================================
+   CITY BUTTONS
+===================================================== */
+
+.foodhub-footer-city {
+  padding: 0;
+
+  margin: 0 0 15px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #555861;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+
+.foodhub-footer-city:hover {
+  color: #e23744;
+
+  transform: translateX(3px);
+}
+
+
+/* =====================================================
+   CITY SELECT
+===================================================== */
+
+.foodhub-city-select {
+  width: 135px;
+
+  height: 38px;
+
+  padding: 0 10px;
+
+  border:
+    1px solid #d1d2d6;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #f8f8fa;
+
+  color: #555861;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+
+.foodhub-city-select:focus {
+  border-color: #e23744;
+
+  box-shadow:
+    0 0 0 3px rgba(226, 55, 68, .10);
+}
+
+
+/* =====================================================
+   SOCIAL LINKS
+===================================================== */
+
+.foodhub-social-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+}
+
+
+.foodhub-social-links a {
+  width: 25px;
+
+  height: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0;
+
+  color: #45484e;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+
+.foodhub-social-links a:hover {
+  color: #e23744;
+
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.foodhub-footer-divider {
+  width: min(1250px, 88%);
+
+  height: 1px;
+
+  margin: 0 auto;
+
+  background: #bfc0c5;
+}
+
+
+/* =====================================================
+   DOWNLOAD SECTION
+===================================================== */
+
+.foodhub-footer-download {
+  width: min(1150px, 92%);
+
+  min-height: 145px;
+
+  margin: 0 auto;
+
+  padding: 28px 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 40px;
+
+  box-sizing: border-box;
+}
+
+
+.foodhub-footer-download h2 {
+  max-width: 570px;
+
+  margin: 0;
+
+  color: #30343b;
+
+  font-size: 23px;
+
+  font-weight: 800;
+
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   STORE BUTTONS
+===================================================== */
+
+.foodhub-footer-store-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+
+.foodhub-store-button {
+  width: 195px;
+
+  height: 64px;
+
+  padding: 8px 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  box-sizing: border-box;
+
+  border-radius: 9px;
+
+  background: #050505;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 5px 12px rgba(0,0,0,.15);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+
+.foodhub-store-button:hover {
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 9px 20px rgba(0,0,0,.22);
+}
+
+
+.foodhub-store-icon {
+  width: 36px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 31px;
+
+  line-height: 1;
+}
+
+
+.foodhub-store-icon.play {
+  font-size: 23px;
+}
+
+
+.foodhub-store-text {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  line-height: 1;
+}
+
+
+.foodhub-store-text small {
+  margin-bottom: 5px;
+
+  color: #eeeeee;
+
+  font-size: 9px;
+
+  font-weight: 500;
+}
+
+
+.foodhub-store-text strong {
+  color: #ffffff;
+
+  font-size: 19px;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .foodhub-footer-container {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 40px;
+
+  }
+
+
+  .foodhub-footer-brand {
+
+    grid-column: span 3;
+
+  }
+
+
+  .foodhub-footer-description {
+
+    max-width: 550px;
+
+  }
+
+
+  .foodhub-footer-download {
+
+    flex-direction: column;
+
+    gap: 22px;
+
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .foodhub-footer-container {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 35px 25px;
+
+    padding:
+      45px 0
+      40px;
+
+  }
+
+
+  .foodhub-footer-brand {
+
+    grid-column: span 2;
+
+  }
+
+
+  .foodhub-footer-logo {
+
+    font-size: 25px;
+
+  }
+
+
+  .foodhub-footer-logo-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+  }
+
+
+  .foodhub-footer-download {
+
+    width: 92%;
+
+    padding:
+      30px 0;
+
+  }
+
+
+  .foodhub-footer-download h2 {
+
+    font-size: 19px;
+
+  }
+
+
+  .foodhub-footer-store-buttons {
+
+    flex-direction: column;
+
+  }
+
+
+  .foodhub-store-button {
+
+    width: 200px;
+
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+  .foodhub-footer-container {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .foodhub-footer-brand {
+
+    grid-column: span 1;
+
+  }
+
+
+  .foodhub-social-links {
+
+    margin-bottom: 10px;
+
+  }
+
+}
